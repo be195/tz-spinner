@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/spinner.css">
+
+  <title>Progress block</title>
+</head>
+<body>
+  <template id="spinner">
+    <svg viewBox="0 0 121 121" fill="none" xmlns="http://www.w3.org/2000/svg" class="progress">
+      <circle cx="60.5" cy="60.5" r="55" class="outer" stroke-width="11" />
+      <circle cx="60.5" cy="60.5" r="55" class="inner" stroke-width="11" stroke-dasharray="345.5749" stroke-dashoffset="345.5749" transform="rotate(-90)" transform-origin="60.5 60.5" />
+    </svg>
+  </template>
+
+  <div class="container">
+    <div class="section left">
+      <span class="label">Progress</span>
+      <div class="spinner"></div>
+    </div>
+    <div class="section">
+      <div class="controls">
+        <input type="number" id="progress" value="25" min="0" max="100">
+        <label for="progress">Value</label>
+
+        <input type="checkbox" id="animate">
+        <label for="animate">Animate</label>
+
+        <input type="checkbox" id="hide">
+        <label for="hide">Hide</label>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js" type="module"></script>
+</body>
+</html>

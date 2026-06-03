@@ -1,0 +1,42 @@
+.progress .outer {
+  stroke: var(--spinner-base-color);
+}
+
+.progress .inner {
+  stroke: var(--spinner-active-color);
+  transition: 0.3s ease;
+}
+
+.progress.animated {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.progress.animated .inner {
+  animation: spin-inner 1s ease infinite;
+}
+
+@keyframes spin-inner {
+  0% {
+    stroke-dashoffset: 345.5749;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    stroke-dashoffset: 86.393725;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    stroke-dashoffset: 345.5749;
+    transform: rotate(360deg);
+  }
+}
